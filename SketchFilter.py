@@ -35,7 +35,7 @@ def sketchFilter(value):
 
 
 
-def sketchFilter2(value):
+def expandableSketchFilter(value):
     for a in range(bumwi // 2, height - bumwi // 2):
         for b in range(bumwi // 2, width - bumwi // 2):
             d = []
@@ -46,7 +46,7 @@ def sketchFilter2(value):
     return value
 
 v1 = sketchFilter(v1)
-v2 = sketchFilter2(v.copy())
+v2 = expandableSketchFilter(v.copy())
 
 
 v1 = np.clip(v1, 0, 255)
